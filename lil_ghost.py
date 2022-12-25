@@ -6,14 +6,14 @@ class pet():
     def __init__(self):
         self.window = tk.Tk()
         self.actions = {
-            "idle_right" : [tk.PhotoImage(file='assets/lil_ghost_idle_right.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "idle_left" : [tk.PhotoImage(file='assets/lil_ghost_idle_left.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "move_right" : [tk.PhotoImage(file='assets/lil_ghost_move_right.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "move_left" : [tk.PhotoImage(file='assets/lil_ghost_move_left.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "up_left" : [tk.PhotoImage(file='assets/lil_ghost_up_left.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "up_right" : [tk.PhotoImage(file='assets/lil_ghost_up_right.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "down_left" : [tk.PhotoImage(file='assets/lil_ghost_down_left.gif', format='gif -index %i' % (i)) for i in range(4)],
-            "down_right" : [tk.PhotoImage(file='assets/lil_ghost_down_right.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "idle_right" : [tk.PhotoImage(file='lil_ghost_idle_right.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "idle_left" : [tk.PhotoImage(file='lil_ghost_idle_left.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "move_right" : [tk.PhotoImage(file='lil_ghost_move_right.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "move_left" : [tk.PhotoImage(file='lil_ghost_move_left.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "up_left" : [tk.PhotoImage(file='lil_ghost_up_left.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "up_right" : [tk.PhotoImage(file='lil_ghost_up_right.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "down_left" : [tk.PhotoImage(file='lil_ghost_down_left.gif', format='gif -index %i' % (i)) for i in range(4)],
+            "down_right" : [tk.PhotoImage(file='lil_ghost_down_right.gif', format='gif -index %i' % (i)) for i in range(4)],
         }
         self.frame_index = 0
         self.action_name = ""
