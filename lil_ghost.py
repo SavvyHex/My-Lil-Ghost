@@ -68,6 +68,8 @@ class pet():
             self.action_name = random.choice(options)
         else:
             self.action_name = "idle_left" if "right" in self.action_name else "idle_right"
+        self.action_length = len(self.actions[self.action_name]) - 1
+        self.num_of_actions = random.randint(2, 4)
 
     def update(self):
         if time.time() > self.timestamp + 0.15:
@@ -82,7 +84,7 @@ class pet():
                 self.y -= 3
             elif "down" in self.action_name:
                 self.y += 3
-            if self.frame_index == 3:
+            if self.frame_index == self.action_length:
                 self.count_frames += 1
 
         self.window.geometry(f'320x320+{self.x}+{self.y}')
@@ -90,10 +92,9 @@ class pet():
         self.label.pack()
         self.window.after(10, self.update)
 
-        if self.count_frames == 2:
+        if self.count_frames == self.num_of_actions:
             self.choose_action()
             self.count_frames = 0
-
 
 if __name__ == "__main__":
     pet()
